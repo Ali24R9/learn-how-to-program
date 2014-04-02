@@ -1,0 +1,16 @@
+<h1>Table of Contents</h1>
+
+<% @lessons.each do |lesson| %>
+  <ul>
+    <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
+  </ul>
+<% end %>
+
+<h2>Add Lesson</h2>
+<p>(yes, students can add lessons)</p>
+<form action = "/lessons" method = "post">
+  <label for = "lesson_name">Lesson Name</label>
+  <input id = "lesson_name" name = "lesson[name]" type = "text"></br>
+  <label for = "lesson_content">Content</label>
+  <textarea id = "lesson_content" name = "lesson[content]" type = "text" rows = "10" cols = "50"></textarea>
+</form>
