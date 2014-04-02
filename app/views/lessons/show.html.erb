@@ -2,4 +2,5 @@
 
 <p><%= @lesson.content %></p>
 
-<p><a href='/lessons/'>Click to Return to table of contents</a></p>
+<button class='btn btn-primary'><a style='color:white' href="/lessons/<%= @lesson.id %>/edit">Edit This Lesson</a></button>
+<button class='btn'><a style="color:black" href='/lessons/'>Click to Return to table of contents</a></button>
