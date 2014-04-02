@@ -1,7 +1,8 @@
 Rebuild this site
 learnhowtoprogram.com is powered by a fairly simple Rails app. Rebuild it yourself.
 
-First, work on CRUD/L functionality for lessons. A lesson has a name and some text content. Don't worry about videos and cheat sheets.
+--Done-- First, work on CRUD/L functionality for lessons. A lesson has a name and some text content. Don't worry about videos and cheat sheets.
+
 Now, we need to get the order of the lessons in. Each lesson has a number. When you click Next lesson at the bottom of the page, it goes to the lesson with the next-highest number.
 
 Also, take care of the Previous lesson link.

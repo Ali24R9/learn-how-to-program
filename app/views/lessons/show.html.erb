@@ -1,6 +1,10 @@
-<h2><%= @lesson.name %></h2>
+<h2><%= @lesson.name %> <%= @lesson.lesson_number %></h2>
 
 <p><%= @lesson.content %></p>
 
 <button class='btn btn-primary'><a style='color:white' href="/lessons/<%= @lesson.id %>/edit">Edit This Lesson</a></button>
+<button class='btn btn-danger'><a style='color:white' href="/lessons/<%= @lesson.id %>"data-confirm="Are you sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></button></br></br>
 <button class='btn'><a style="color:black" href='/lessons/'>Click to Return to table of contents</a></button>
+
