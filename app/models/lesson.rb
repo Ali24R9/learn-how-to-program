@@ -1,5 +1,6 @@
 class Lesson < ActiveRecord::Base
   validates :name, :presence => true
+  belongs_to :section
 
   def next_lesson
     sorted = Lesson.order(lesson_number: :asc)

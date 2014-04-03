@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Lesson do
   it { should validate_presence_of :name }
+  it { should belong_to :section }
 
   describe 'next' do
     it 'should return the next lesson' do

@@ -10,10 +10,10 @@
 
 <ul class="pager">
 <% if @lesson.previous_lesson != nil %>
-  <li class="previous"><a href="/lessons/<%= @lesson.previous_lesson.id %>">&larr;Previous Lesson</a></li>
+  <li class="previous"><a href="/sections/lessons/<%= @lesson.previous_lesson.id %>">&larr;Previous Lesson</a></li>
 <% end %>
 <% if @lesson.next_lesson != nil %>
-  <li class="next"><a href="/lessons/<%= @lesson.next_lesson.id %>"
+  <li class="next"><a href="/sections/lessons/<%= @lesson.next_lesson.id %>"
   >Next Lesson&rarr;</a></li>
 <% end %>
 </ul>

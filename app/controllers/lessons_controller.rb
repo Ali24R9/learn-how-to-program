@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
 
   def index
+    @section = Section.all
     @lessons = Lesson.all
     render('lessons/index.html.erb')
   end
@@ -10,6 +11,11 @@ class LessonsController < ApplicationController
     render('lessons/show.html.erb')
   end
 
+  def new
+
+    @lesson = Lesson.new
+    render('lessons/new.html.erb')
+  end
 
   def create
     @lesson = Lesson.create(params[:lesson])

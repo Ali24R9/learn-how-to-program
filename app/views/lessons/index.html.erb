@@ -1,18 +1,23 @@
-<h1>Table of Contents</h1>
+<h1>Lessons</h1>
 
 <% @lessons.each do |lesson| %>
   <ul>
-    <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
+    <li><a href="sections/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
   </ul>
 <% end %>
 
 <h2>Add Lesson</h2>
-<p>(yes, students can add lessons)</p>
-<form action="/lessons" method="post">
+<form action="/sections/lessons/new" method="post">
   <label for="lesson_number">LessonNumber</label>
   <input id="lesson_number" name="lesson[lesson_number]" type="text"></br>
   <label for ="lesson_name">Lesson Name</label>
   <input id="lesson_name" name="lesson[name]" type="text"></br>
+  <label for="section_id">Section</label>
+  <select id='section_id' name="lesson[section_id]">
+    <% Section.all.each do |section| %>
+      <option value="<%= section.id.to_i %>"><%= section.name %></option>
+    <% end %>
+  </select>
   <label for="lesson_content">Content</label>
   <textarea id="lesson_content" name="lesson[content]" type="text" rows="10" cols ="10">
   </textarea></br>
